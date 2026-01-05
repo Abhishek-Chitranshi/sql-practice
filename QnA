@@ -1,0 +1,22 @@
+Question 1: Find the Second Highest Salary
+
+SELECT MAX(salary) AS second_highest_salary
+FROM Employees
+WHERE salary < (
+    SELECT MAX(salary) FROM Employees);
+
+Question 2:Employees Earning More Than Their Manager
+
+SELECT e.name
+FROM Employee e
+JOIN Employee m
+  ON e.manager_id = m.id
+WHERE e.salary > m.salary;
+
+Question 3: Customers With No Orders
+
+SELECT c.name
+FROM Customers c
+LEFT JOIN Orders o
+  ON c.id = o.customer_id
+WHERE o.customer_id IS NULL;
