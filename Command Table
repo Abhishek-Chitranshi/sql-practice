@@ -1,0 +1,31 @@
+| **Query / Command** | **Syntax**                                      | **Use / Purpose**               |
+| ------------------- | ----------------------------------------------- | ------------------------------- |
+| CREATE DATABASE     | `CREATE DATABASE db_name;`                      | Creates a new database          |
+| USE DATABASE        | `USE db_name;`                                  | Selects the database to work on |
+| SHOW DATABASES      | `SHOW DATABASES;`                               | Displays all databases          |
+| CREATE TABLE        | `CREATE TABLE table_name (column datatype);`    | Creates a new table             |
+| SHOW TABLES         | `SHOW TABLES;`                                  | Lists all tables in a database  |
+| DESCRIBE            | `DESCRIBE table_name;`                          | Shows table structure           |
+| INSERT              | `INSERT INTO table_name VALUES (...);`          | Inserts data into a table       |
+| SELECT              | `SELECT * FROM table_name;`                     | Retrieves data from table       |
+| SELECT COLUMNS      | `SELECT col1, col2 FROM table_name;`            | Retrieves specific columns      |
+| WHERE               | `SELECT * FROM table_name WHERE condition;`     | Filters rows                    |
+| AND / OR            | `WHERE cond1 AND cond2;`                        | Multiple conditions             |
+| DISTINCT            | `SELECT DISTINCT column FROM table_name;`       | Removes duplicate values        |
+| COUNT               | `SELECT COUNT(*) FROM table_name;`              | Counts rows                     |
+| SUM                 | `SELECT SUM(column) FROM table_name;`           | Adds numeric values             |
+| AVG                 | `SELECT AVG(column) FROM table_name;`           | Calculates average              |
+| MIN / MAX           | `SELECT MIN(col), MAX(col) FROM table_name;`    | Finds smallest / largest value  |
+| GROUP BY            | `SELECT col, COUNT(*) FROM table GROUP BY col;` | Groups similar values           |
+| HAVING              | `GROUP BY col HAVING COUNT(*) > 1;`             | Filters grouped data            |
+| ORDER BY            | `SELECT * FROM table ORDER BY col DESC;`        | Sorts results                   |
+| LIMIT               | `SELECT * FROM table LIMIT 10;`                 | Limits number of rows           |
+| INNER JOIN          | `FROM t1 JOIN t2 ON condition;`                 | Matches records in both tables  |
+| LEFT JOIN           | `FROM t1 LEFT JOIN t2 ON condition;`            | All records from left table     |
+| CASE                | `CASE WHEN cond THEN val ELSE val END`          | Conditional logic               |
+| IS NULL             | `WHERE column IS NULL;`                         | Finds NULL values               |
+| IS NOT NULL         | `WHERE column IS NOT NULL;`                     | Finds non-NULL values           |
+| DELETE              | `DELETE FROM table WHERE condition;`            | Deletes rows                    |
+| TRUNCATE            | `TRUNCATE TABLE table_name;`                    | Deletes all rows quickly        |
+| DROP TABLE          | `DROP TABLE table_name;`                        | Deletes table                   |
+| LOAD DATA           | `LOAD DATA INFILE 'path' INTO TABLE table;`     | Imports CSV into MySQL          |
